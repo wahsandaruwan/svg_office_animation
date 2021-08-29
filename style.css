@@ -1,0 +1,119 @@
+/* -----Reset----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----Common----- */
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #63c0eb;
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+}
+
+svg{
+    width: 100%;
+}
+
+/* -----Animations----- */
+
+/* ---Person 1--- */
+/* Left Leg */
+#p1-leg-left{
+    animation: p1-move-left-leg 2s infinite alternate;
+    transform-origin: top left;
+    transform-box: fill-box;
+}
+
+@keyframes p1-move-left-leg{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(-5deg);
+    }
+}
+
+/* Both Hands */
+#p1-hand-left,
+#p1-hand-right{
+    animation: p1-move-hands 1s infinite alternate;
+    transform-origin: top left;
+    transform-box: fill-box;
+}
+
+@keyframes p1-move-hands{
+    from{
+        transform: rotateZ(-5deg);
+    }
+
+    to{
+        transform: rotateZ(5deg);
+    }
+}
+
+/* ---Person 2--- */
+/* Left Leg */
+#p2-leg-left{
+    animation: p2-move-left-leg 1s infinite alternate;
+    transform-origin: top right;
+    transform-box: fill-box;
+}
+
+@keyframes p2-move-left-leg{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(10deg);
+    }
+}
+
+/* Both Hands */
+#p2-hand-left,
+#p2-hand-right{
+    animation: p2-move-hands 3s infinite alternate;
+    transform-origin: top right;
+    transform-box: fill-box;
+}
+
+@keyframes p2-move-hands{
+    from{
+        transform: rotateZ(-5deg);
+    }
+
+    to{
+        transform: rotateZ(5deg);
+    }
+}
+
+/* ---Both Person--- */
+/* Head */
+#p1-head,
+#p2-head{
+    animation: p1-p2-move-head 2s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes p1-p2-move-head{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(10deg);
+    }
+}
